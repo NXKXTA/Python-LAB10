@@ -15,7 +15,9 @@ print("Словарь: ", dct)
 dct1 = dict([(x[0], x[1]) for x in sorted(dct.items(), key=lambda x: x[0])])
 print("dct1: ", dct1)
 
-dct2 = dict([(x[0], x[1]) for x in sorted(dct1.items(), key=lambda x: x[1])][::-1])
+dct2 = dict(
+    [(x[0], x[1]) for x in sorted(dct1.items(), key=lambda x: x[1], reverse=True)]
+)
 print("dct2: ", dct2)
 
 # Недоразумение

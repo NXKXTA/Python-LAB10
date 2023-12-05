@@ -2,9 +2,9 @@ from random import randint, shuffle
 import time
 
 
-def bubble(array, N):
-    for i in range(N - 1):
-        for j in range(N - i - 1):
+def bubble(array, n):
+    for i in range(n - 1):
+        for j in range(n - i - 1):
             if array[j] > array[j + 1]:
                 buff = array[j]
                 array[j] = array[j + 1]
@@ -29,4 +29,6 @@ for _ in range(999):
 end2 = time.time() - start  # время выполнения
 print("Среднее время выполнения моей функции: %.5f" % (end2 / K))
 
-print(f"\nВстроенная функция работает примерно в {round(end2 / end1, 1)} раза быстрее сортировки пузырьком")
+print(
+    f"\nВстроенная функция работает примерно в {round(end2 / end1, 1)} раза быстрее сортировки пузырьком"
+)
